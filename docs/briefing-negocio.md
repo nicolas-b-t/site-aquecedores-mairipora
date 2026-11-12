@@ -9,7 +9,7 @@
 
 - **Negócio e localização atendida:** Aquecedores Mairiporã, com atendimento em Mairiporã/SP e região. A abrangência exata por bairro ainda não foi confirmada.
 - **Produto ou serviço principal:** venda, instalação e manutenção de aquecedores solares, elétricos e a gás; aquecimento de piscina; hidráulica, bombas, filtros e troca de componentes.
-- **Canais atuais de atendimento e venda:** WhatsApp, telefone e e-mail. Os dados publicados vêm do site de 2018: WhatsApp (11) 99765-1790, telefone (11) 4604-5226, e-mail aquecedoresmairipora@gmail.com e endereço na Rua Ana Maria C. Camargo, 29 — Jardim Galrão.
+- **Canais atuais de atendimento e venda:** WhatsApp, telefone e e-mail. Os dados publicados vêm do site de 2018: WhatsApp (11) 99765-1790, telefone fixo (11) 97944-5226, e-mail aquecedoresmairipora@gmail.com e endereço na Rua Ana Maria C. Camargo, 29 — Jardim Galrão.
 - **Problema que motivou a página:** o site atual é uma página de blog antiga, com layout de 2018 e links externos. A nova página reúne oferta, marcas e contato em uma única visualização.
 - **Restrições de prazo, orçamento, operação ou marca:**
   - primeira versão somente com a landing page;
@@ -53,7 +53,8 @@
 | Afirmação, imagem ou dado | Fonte | Permissão de uso | Estado |
 | --- | --- | --- | --- |
 | Serviços de aquecedor solar, elétrico, piscina, banheira, capa térmica, resistência, bombas, filtros e sauna | Conteúdo do site antigo (captura de 2026-11-12) | Conteúdo do próprio cliente; confirmar redação atual | Publicado; confirmar |
-| WhatsApp, telefone, e-mail e endereço | Site antigo (2018) | Dados do próprio cliente | Publicado; confirmar atualidade |
+| WhatsApp, telefone e endereço | Site antigo (2018) | Dados do próprio cliente | Publicado; confirmar atualidade |
+| Telefone fixo (11) 97944-5226 | Informado pelo responsável em 2026-11-12 | Dado do cliente | Publicado na barra superior |
 | Marcas Termomax, Heliodin, Solarmax, Tempersol, Industek, Komeco, Tigre e Amanco | Site antigo (2018) | Uso de marcas de terceiros | Publicado como “marcas que trabalhamos”; confirmar autorização |
 | Imagens do site antigo | Captura em `referencias/fonte-site-atual/` | Direitos dos titulares | Três imagens publicadas com texto alternativo |
 | Depoimentos, números, selos e garantias | Nenhuma fonte localizada | — | Não publicados |

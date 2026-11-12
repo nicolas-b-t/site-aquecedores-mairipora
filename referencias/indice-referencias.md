@@ -26,7 +26,7 @@ Os itens abaixo são insumos de trabalho ou consultas, não fontes aprovadas par
 | `fonte-site-atual/imagens/` | 14 imagens do site | Nomes normalizados; bytes conferidos no manifesto | Direitos de uso pertencem aos titulares |
 | `fonte-site-atual/recursos/css-bundle-v2.css` | CSS público do Blogger | 36.892 bytes | Usado apenas como referência; o arquivo publicado usa cópia própria |
 | `../static/versao-antiga/` | Arquivo navegável do site | Ativos locais e links internos verificados; `noindex` presente | Inclui uma imagem adicional (`temperol-vendas.jpg`) capturada para completar o conjunto |
-| `../static/assets/img/` | Imagens da nova landing page | Quatro arquivos otimizados a partir do site original (`logo-aquecedores-mairipora.jpg`, `aquecimento-piscina.jpg`, `reservatorio-termomax.jpg`, `esquema-instalacao.jpg`) | Cópias redimensionadas; os originais permanecem no arquivo |
+| `../static/assets/img/` | Imagens da nova landing page | Logotipo vetorial próprio (`logo-aquecedores-mairipora.svg`, `marca-sol.svg`) e três fotos otimizadas do site original (`aquecimento-piscina.jpg`, `reservatorio-termomax.jpg`, `esquema-instalacao.jpg`) | O SVG foi redesenhado a partir da marca original; os originais permanecem no arquivo |
 
 ## Observações de direitos
 

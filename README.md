@@ -21,7 +21,7 @@ site-aquecedores-mairipora/
 │   │   ├── css/styles.css          # Folha única
 │   │   ├── js/main.js              # Script único (ano do rodapé)
 │   │   ├── icons/                  # Ícones SVG (data-icon)
-│   │   └── img/                    # Imagens trazidas do site antigo
+│   │   └── img/                    # Logo em SVG e fotos do site antigo
 │   └── versao-antiga/              # Arquivo do site original
 │       ├── index.html
 │       ├── contato.html
@@ -41,13 +41,14 @@ site-aquecedores-mairipora/
 
 ## 2. O que a página tem
 
-- Cabeçalho com logotipo do site original, navegação e botão de WhatsApp.
+- Barra superior escura com o telefone fixo em destaque, WhatsApp, e-mail e a região de atendimento.
+- Cabeçalho com logotipo vetorial (SVG), navegação e botão de WhatsApp.
 - Título, texto de apoio e botões de orçamento (WhatsApp) e telefone.
 - Nove serviços: solar, elétrico, piscina, banheira, capa térmica, resistência, bombas, filtros e sauna.
 - Linha de marcas: Termomax, Heliodin, Solarmax, Tempersol, Industek, Komeco, Tigre e Amanco.
 - Galeria com três imagens do site original (aquecimento de piscina, reservatório Termomax e esquema de instalação).
-- Faixa de contato com WhatsApp, telefone, e-mail e endereço.
-- Rodapé com o link **“Versão antiga”**.
+- Endereço no hero, junto aos botões de contato.
+- Rodapé enxuto com o link **“Versão antiga”**.
 
 Não há formulário, banner de cookies, analytics, UTM ou armazenamento local.
 
@@ -73,7 +74,7 @@ Em telas pequenas a página flui normalmente, sem cortes.
 | Canal | Valor | Origem |
 |---|---|---|
 | WhatsApp | (11) 99765-1790 | site original (2018) |
-| Telefone | (11) 4604-5226 | site original (2018) |
+| Telefone fixo | (11) 97944-5226 | informado pelo responsável em 2026-11-12 |
 | E-mail | aquecedoresmairipora@gmail.com | site original (2018) |
 | Endereço | Rua Ana Maria C. Camargo, 29 — Jardim Galrão, Mairiporã/SP | site original (2018) |
 

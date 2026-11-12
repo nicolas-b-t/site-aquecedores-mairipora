@@ -13,8 +13,9 @@
 | RF-01 | Apresentar a empresa, a proposta de valor e a ação de orçamento na primeira dobra | Essencial | `static/index.html` contém `h1` único, texto de apoio e botões de WhatsApp e telefone | Implementado |
 | RF-02 | Listar os serviços em nove itens curtos, com ícones | Essencial | Grade de 9 itens: solar, elétrico, piscina, banheira, capa térmica, resistência, bombas, filtros e sauna | Implementado |
 | RF-03 | Exibir as marcas trabalhadas | Desejável | Linha “Marcas” com Termomax, Heliodin, Solarmax, Tempersol, Industek, Komeco, Tigre e Amanco | Implementado |
-| RF-04 | Publicar os dados de contato do site original | Essencial | WhatsApp `(11) 99765-1790` (`wa.me/5511997651790`), telefone `(11) 4604-5226` (`tel:`), e-mail `aquecedoresmairipora@gmail.com` (`mailto:`) e endereço | Implementado |
+| RF-04 | Publicar os contatos em destaque no topo da página | Essencial | Barra superior com telefone fixo `(11) 97944-5226` (`tel:`), WhatsApp `(11) 99765-1790` (`wa.me/5511997651790`) e e-mail `aquecedoresmairipora@gmail.com` (`mailto:`); endereço no hero | Implementado |
 | RF-05 | Usar imagens do site original | Desejável | Três imagens em `static/assets/img/`, com texto alternativo e legendas | Implementado |
+| RF-05b | Exibir logotipo vetorial nítido | Essencial | `assets/img/logo-aquecedores-mairipora.svg` no cabeçalho, sem moldura raster | Implementado |
 | RF-06 | Caber em uma única visualização em telas grandes | Essencial | Em 1024×768, 1280×720, 1366×768, 1440×900 e 1920×1080 não há rolagem; verificado em navegador headless | Implementado |
 | RF-07 | Manter o arquivo do site original acessível | Essencial | Link **“Versão antiga”** no rodapé, apontando para `versao-antiga/index.html` | Implementado |
 | RF-08 | Identificar o arquivo como histórico | Essencial | As três páginas do arquivo mantêm faixa de aviso, retorno à nova página e `noindex, nofollow` | Implementado |

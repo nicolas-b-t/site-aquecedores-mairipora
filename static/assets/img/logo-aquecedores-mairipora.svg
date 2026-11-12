@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 88" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Aquecedores Mairiporã</title>
+  <g>
+    <circle cx="36" cy="34" r="30" fill="#f7a11a"/>
+    <path d="M6 40c10-12 20-12 30 0s20 12 30 0" fill="none" stroke="#ffffff" stroke-width="7.5" stroke-linecap="round"/>
+    <path d="M10 55c8-7 15-7 23 0s15 7 23 0" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.9"/>
+  </g>
+  <g font-family="'Arial Black','Arial Bold',Arial,Helvetica,sans-serif" font-weight="900">
+    <text x="78" y="42" font-size="27" fill="#e2231a" textLength="212" lengthAdjust="spacingAndGlyphs">AQUEÇEDORES</text>
+    <text x="95" y="71" font-size="27" fill="#1c3f94" textLength="178" lengthAdjust="spacingAndGlyphs">MAIRIPORÃ</text>
+  </g>
+</svg>

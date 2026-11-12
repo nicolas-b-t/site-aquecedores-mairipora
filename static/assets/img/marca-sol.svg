@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-labelledby="marcaTitle">
+  <title id="marcaTitle">Aquecedores Mairiporã</title>
+  <circle cx="36" cy="36" r="30" fill="#f7a11a"/>
+  <path d="M8 40c9-11 18-11 28 0s19 11 28 0" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M12 54c7-6 14-6 21 0s14 6 21 0" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+</svg>
