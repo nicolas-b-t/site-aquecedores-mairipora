@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PedidoDeOrcamento",
+  "description": "Contrato do resumo de pedido gerado localmente pela landing page da Aquecedores Mairiporã. Nenhum dado é enviado pela página; o objeto representa o conteúdo produzido no navegador.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Nome informado pelo visitante"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "E-mail para retorno do orçamento"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefone ou WhatsApp com DDD (opcional)"
+    },
+    "selected_service": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Serviço de interesse escolhido no formulário"
+    },
+    "message": {
+      "type": "string",
+      "description": "Descrição livre do equipamento, local ou problema (opcional)"
+    },
+    "consent": {
+      "type": "boolean",
+      "const": true,
+      "description": "Autorização para uso dos dados no contato e na elaboração do orçamento"
+    },
+    "utm_source": {
+      "type": "string",
+      "description": "Origem da campanha (ex.: google, facebook, newsletter)"
+    },
+    "utm_medium": {
+      "type": "string",
+      "description": "Mídia da campanha (ex.: cpc, banner, email)"
+    },
+    "utm_campaign": {
+      "type": "string",
+      "description": "Identificador da campanha"
+    },
+    "utm_term": {
+      "type": "string",
+      "description": "Termo de busca pago"
+    },
+    "utm_content": {
+      "type": "string",
+      "description": "Conteúdo ou variação do anúncio"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora ISO 8601 em que o resumo foi gerado"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "selected_service",
+    "consent",
+    "timestamp"
+  ],
+  "additionalProperties": false
+}
