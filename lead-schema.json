@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "PedidoDeOrcamento",
-  "description": "Contrato do resumo de pedido gerado localmente pela landing page da Aquecedores Mairiporã. Nenhum dado é enviado pela página; o objeto representa o conteúdo produzido no navegador.",
+  "title": "ContatoReservado",
+  "description": "Contrato reservado para um eventual formulário de contato. A versão atual da landing page não possui formulário: o visitante fala direto por WhatsApp, telefone ou e-mail, e nenhum dado é capturado pela página.",
   "type": "object",
   "properties": {
     "name": {
@@ -16,54 +16,26 @@
     },
     "phone": {
       "type": "string",
-      "description": "Telefone ou WhatsApp com DDD (opcional)"
+      "description": "Telefone ou WhatsApp com DDD"
     },
     "selected_service": {
       "type": "string",
-      "minLength": 1,
-      "description": "Serviço de interesse escolhido no formulário"
+      "description": "Serviço de interesse"
     },
     "message": {
       "type": "string",
-      "description": "Descrição livre do equipamento, local ou problema (opcional)"
+      "description": "Descrição livre do equipamento ou problema"
     },
     "consent": {
       "type": "boolean",
-      "const": true,
-      "description": "Autorização para uso dos dados no contato e na elaboração do orçamento"
-    },
-    "utm_source": {
-      "type": "string",
-      "description": "Origem da campanha (ex.: google, facebook, newsletter)"
-    },
-    "utm_medium": {
-      "type": "string",
-      "description": "Mídia da campanha (ex.: cpc, banner, email)"
-    },
-    "utm_campaign": {
-      "type": "string",
-      "description": "Identificador da campanha"
-    },
-    "utm_term": {
-      "type": "string",
-      "description": "Termo de busca pago"
-    },
-    "utm_content": {
-      "type": "string",
-      "description": "Conteúdo ou variação do anúncio"
+      "description": "Autorização para uso dos dados no atendimento"
     },
     "timestamp": {
       "type": "string",
       "format": "date-time",
-      "description": "Data e hora ISO 8601 em que o resumo foi gerado"
+      "description": "Data e hora ISO 8601 do registro"
     }
   },
-  "required": [
-    "name",
-    "email",
-    "selected_service",
-    "consent",
-    "timestamp"
-  ],
+  "required": ["name", "email"],
   "additionalProperties": false
 }

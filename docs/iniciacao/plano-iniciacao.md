@@ -68,3 +68,13 @@
   - manter cópia do site original e link **“Versão antiga”** dentro da nova página.
 - **Ressalvas e pendências:** os dados de contato e as marcas não foram confirmados; a página não envia dados a nenhum servidor enquanto o canal definitivo não for definido.
 - **Próximo passo autorizado:** concluir a landing page e o arquivo, executar `verificar-padrao.ps1` e submeter os textos comerciais à validação do responsável pela empresa.
+
+## Revisão de escopo — versão 2 (2026-11-12)
+
+- **Decisão do operador:** trazer os dados do site original, remover os módulos de funcionalidade, aplicar estética neobrutalista, usar as imagens do site antigo e montar a página para caber em uma única visualização.
+- **Dados trazidos do site original:** WhatsApp (11) 99765-1790, telefone (11) 4604-5226, e-mail aquecedoresmairipora@gmail.com, endereço na Rua Ana Maria C. Camargo, 29 — Jardim Galrão, Mairiporã/SP, serviços e marcas já capturados.
+- **Removido:** formulário de orçamento, validação, resumo local, UTMs, banner e modal LGPD, FAQ e barra flutuante. A página não coleta nem armazena dados.
+- **Imagens:** três imagens do site original foram otimizadas para `static/assets/img/` (aquecimento de piscina, reservatório Termomax e esquema de instalação). O arquivo em `static/versao-antiga/` permanece intacto.
+- **Visual:** `data-estilo="neobrutalista"` com `data-brand="industrial-obras"`.
+- **Visualização única:** verificada sem rolagem em 1024×768, 1280×720, 1366×768, 1440×900 e 1920×1080; em telas menores o conteúdo flui.
+- **Ressalva:** os contatos continuam sendo dados de 2018 e devem ser confirmados antes da divulgação.

@@ -1,98 +1,106 @@
 # Aquecedores Mairiporã — landing page (`site-aquecedores-mairipora`)
 
-Landing page estática de página única para a **Aquecedores Mairiporã**, com apresentação dos serviços, pedido de orçamento montado no navegador e arquivo navegável do site original.
+Landing page estática de **visualização única** para a **Aquecedores Mairiporã**, com estética **neobrutalista**, os dados de contato do site original e o arquivo navegável da versão anterior.
 
-> **Estado:** primeira versão publicada. Os dados comerciais não confirmados permanecem como placeholder `[a definir]` e os canais de envio estão desativados até validação com a empresa.
+> **Estado:** publicado. Sem formulário e sem coleta de dados: o contato é direto por WhatsApp, telefone e e-mail.
 
 ## 0. Publicação
 
 - **Repositório:** <https://github.com/nicolas-b-t/site-aquecedores-mairipora> (público)
 - **Site publicado:** <https://nicolas-b-t.github.io/site-aquecedores-mairipora/>
 - **Versão antiga:** <https://nicolas-b-t.github.io/site-aquecedores-mairipora/versao-antiga/index.html>
-- **Origem do deploy:** workflow `.github/workflows/pages.yml`, disparado a cada `push` em `main`; publica apenas `static/`.
+- **Deploy:** workflow `.github/workflows/pages.yml`, disparado a cada `push` em `main`; publica apenas `static/`.
 
 ## 1. Estrutura
 
 ```text
 site-aquecedores-mairipora/
 ├── static/                         # Única pasta publicada
-│   ├── index.html                  # Nova landing page
+│   ├── index.html                  # Landing page (uma tela)
 │   ├── assets/
 │   │   ├── css/styles.css          # Folha única
-│   │   ├── js/main.js              # Script único
-│   │   └── icons/                  # Ícones SVG (data-icon)
+│   │   ├── js/main.js              # Script único (ano do rodapé)
+│   │   ├── icons/                  # Ícones SVG (data-icon)
+│   │   └── img/                    # Imagens trazidas do site antigo
 │   └── versao-antiga/              # Arquivo do site original
 │       ├── index.html
 │       ├── contato.html
 │       ├── politica-de-privacidade.html
-│       └── assets/                 # CSS, imagens e fundo locais
+│       └── assets/
 ├── docs/
 │   ├── iniciacao/plano-iniciacao.md
 │   ├── briefing-negocio.md
 │   └── lista-requisitos.md
 ├── referencias/
-│   ├── fonte-site-atual/           # Captura de referência do Blogger
+│   ├── fonte-site-atual/           # Captura de referência (não publicada)
 │   └── indice-referencias.md
-├── lead-schema.json                # Contrato do resumo do pedido
+├── lead-schema.json                # Reservado para formulário futuro
 ├── verificar-padrao.ps1
-└── .github/workflows/pages.yml     # Publica apenas static/
+└── .github/workflows/pages.yml
 ```
 
-## 2. O que a página faz
+## 2. O que a página tem
 
-- Apresenta serviços, processo, diferenciais, público e dúvidas frequentes.
-- Valida o formulário no navegador (nome, e-mail, serviço e consentimento; telefone opcional).
-- Gera um resumo local com os dados do pedido e UTMs, sem enviar nada a servidor.
-- Permite copiar o resumo. Os botões de WhatsApp e e-mail só aparecem quando configurados em `SITE_CONFIG`.
-- Captura UTMs da URL e aceita `?servico=...` para pré-selecionar um serviço.
-- Exibe aviso de privacidade e modal com a política da nova página.
-- Mantém a escolha do aviso apenas no `localStorage` (`aqm_lgpd_accepted`).
+- Cabeçalho com logotipo do site original, navegação e botão de WhatsApp.
+- Título, texto de apoio e botões de orçamento (WhatsApp) e telefone.
+- Nove serviços: solar, elétrico, piscina, banheira, capa térmica, resistência, bombas, filtros e sauna.
+- Linha de marcas: Termomax, Heliodin, Solarmax, Tempersol, Industek, Komeco, Tigre e Amanco.
+- Galeria com três imagens do site original (aquecimento de piscina, reservatório Termomax e esquema de instalação).
+- Faixa de contato com WhatsApp, telefone, e-mail e endereço.
+- Rodapé com o link **“Versão antiga”**.
 
-## 3. Configuração pendente
+Não há formulário, banner de cookies, analytics, UTM ou armazenamento local.
 
-Antes de publicar, validar com a empresa:
+## 3. Visualização única
 
-1. **Contatos do rodapé** em `static/index.html`: WhatsApp, telefone, e-mail, endereço e horário estão como `[a definir]`.
-2. **Canais de envio** em `static/assets/js/main.js`:
+O layout usa `100svh` com grade `auto / 1fr / auto / auto` e `overflow: hidden` a partir de 1024 px de largura e 620 px de altura. A coluna de texto é centralizada e a galeria ocupa o restante da tela.
 
-```js
-const SITE_CONFIG = {
-  brandName: 'Aquecedores Mairiporã',
-  whatsapp: '', // DDI + DDD + número, somente dígitos
-  email: ''     // e-mail validado
-};
-```
+Verificado em navegador headless (Chromium 158) sem rolagem em:
 
-3. **Serviços, marcas e cobertura** nos textos da página e no FAQ.
-4. **Direitos das imagens e marcas** mantidas em `static/versao-antiga/`.
+| Viewport | Resultado |
+|---|---|
+| 1920 × 1080 | sem rolagem |
+| 1440 × 900 | sem rolagem |
+| 1366 × 768 | sem rolagem |
+| 1280 × 720 | sem rolagem |
+| 1024 × 768 | sem rolagem |
+| 390 × 844 | rolagem vertical (necessária para o conteúdo) |
 
-Enquanto os canais estiverem vazios, o formulário mostra apenas o resumo e a opção de copiar, com uma nota de que os canais estão em validação. Nenhum dado é transmitido.
+Em telas pequenas a página flui normalmente, sem cortes.
 
-## 4. Versão antiga
+## 4. Dados publicados
 
-O link **“Versão antiga”** fica no rodapé de `static/index.html` — na lista de links e embutido no texto do rodapé — e abre `static/versao-antiga/index.html`.
+| Canal | Valor | Origem |
+|---|---|---|
+| WhatsApp | (11) 99765-1790 | site original (2018) |
+| Telefone | (11) 4604-5226 | site original (2018) |
+| E-mail | aquecedoresmairipora@gmail.com | site original (2018) |
+| Endereço | Rua Ana Maria C. Camargo, 29 — Jardim Galrão, Mairiporã/SP | site original (2018) |
 
-- As três páginas foram copiadas do site original e tiveram os ativos e links internos reescritos para caminhos locais.
+Os dados foram trazidos do site anterior e **devem ser confirmados** com o responsável pela empresa. Horário de atendimento não consta no site original e não foi publicado.
+
+## 5. Versão antiga
+
+O link **“Versão antiga”** fica no rodapé de `static/index.html` e abre `static/versao-antiga/index.html`.
+
+- As três páginas foram copiadas do site original e tiveram ativos e links internos reescritos para caminhos locais.
 - Scripts, feeds, canônicos e links de autorização do Blogger foram removidos.
-- Cada página do arquivo exibe uma faixa de aviso e um link de retorno à nova página.
-- As páginas usam `noindex, nofollow` para não competir com a nova landing page.
-- A captura de referência preservada está em `referencias/fonte-site-atual/` (`referencias/` não é publicada).
-- Imagens, logotipos e marcas do site antigo pertencem aos respectivos titulares. A manutenção pública do arquivo deve ser confirmada pelo responsável.
-- `contato.html` mantém o mapa incorporado do Google Maps do site original. É o único recurso externo restante no arquivo e carrega conteúdo de terceiros; se a publicação exigir consentimento prévio, substitua o `iframe` por um link para o mapa.
+- Cada página exibe faixa de aviso e link de retorno à nova página.
+- As páginas usam `noindex, nofollow` para não competir com a landing page.
+- A captura de referência está em `referencias/fonte-site-atual/` (não publicada).
+- `contato.html` mantém o mapa incorporado do Google Maps do original; é o único recurso externo do arquivo.
+- Imagens, logotipos e marcas pertencem aos respectivos titulares.
 
-## 5. Executar e verificar
+## 6. Executar e verificar
 
 Não há etapa de build. Para abrir localmente:
 
 ```powershell
-# Opção 1: abrir diretamente
 start .\static\index.html
 
-# Opção 2: servir a pasta (necessário para testar clipboard em alguns navegadores)
+# ou servir a pasta
 python -m http.server 8000 --directory static
 ```
-
-O clipboard pode exigir um contexto seguro (`http://localhost` ou HTTPS). Em `file://`, o script usa uma alternativa com `document.execCommand`.
 
 Auditoria obrigatória antes da entrega:
 
@@ -102,14 +110,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\verificar-padrao.ps1
 
 A auditoria cobre profundidade de pastas, marcadores residuais, `h1` único, estilos/SVGs inline, ícones, schema, arquivo único de CSS/JS, `data-estilo`, contraste e orçamento de CSS.
 
-## 6. Publicação
-
-O repositório público `nicolas-b-t/site-aquecedores-mairipora` está configurado com GitHub Pages em modo **GitHub Actions**. O workflow `.github/workflows/pages.yml` publica somente `static/` e roda a cada `push` em `main` ou por acionamento manual (`workflow_dispatch`).
-
-- Site: <https://nicolas-b-t.github.io/site-aquecedores-mairipora/>
-- Primeiro deploy verificado em 2026-11-12, com `200` na home, nas três páginas do arquivo, no CSS, no JS e nas 15 imagens.
-
-Não há back-end, banco de dados, analytics ou dependências de terceiros. Para republicar após uma alteração:
+## 7. Publicação
 
 ```powershell
 git add -A
@@ -117,9 +118,9 @@ git commit -m "descrição da alteração"
 git push
 ```
 
-## 7. Documentação
+## 8. Documentação
 
 - [`docs/iniciacao/plano-iniciacao.md`](docs/iniciacao/plano-iniciacao.md) — decisões, escopo e consulta ao PMBOK.
 - [`docs/briefing-negocio.md`](docs/briefing-negocio.md) — contexto, público, oferta e lacunas.
-- [`docs/lista-requisitos.md`](docs/lista-requisitos.md) — requisitos funcionais, não funcionais e critérios de aceitação.
-- [`referencias/indice-referencias.md`](referencias/indice-referencias.md) — estado das fontes e verificação das cópias.
+- [`docs/lista-requisitos.md`](docs/lista-requisitos.md) — requisitos e critérios de aceitação.
+- [`referencias/indice-referencias.md`](referencias/indice-referencias.md) — fontes e verificação das cópias.

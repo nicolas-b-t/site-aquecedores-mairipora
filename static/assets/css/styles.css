@@ -1333,274 +1333,6 @@ pre {
   background-color: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(3px);
 }/* --------------------------------------------------------------------------
-   10. FAQ (<details> / <summary>), CTA Final e Barra Flutuante
-   -------------------------------------------------------------------------- */
-.faq-list {
-  max-inline-size: 760px;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.faq-item {
-  background-color: var(--color-surface);
-  border: var(--line-width) solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: var(--space-md) var(--space-lg);
-}
-
-.faq-question {
-  font-weight: 700;
-  font-size: 1.025rem;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  min-block-size: 32px;
-}
-
-.faq-question::-webkit-details-marker {
-  display: none;
-}
-
-.faq-question::after {
-  content: "+";
-  font-family: var(--font-mono);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--color-accent-ink);
-}
-
-.faq-item[open] .faq-question::after {
-  content: "−";
-}
-
-.faq-answer {
-  margin-block-start: var(--space-sm);
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-}
-
-.cta-banner {
-  text-align: center;
-  max-inline-size: 680px;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-md);
-}
-
-/* Barra Flutuante de Conversão Rápida */
-.floating-cta {
-  position: fixed;
-  inset-block-end: 1rem;
-  inset-inline-end: 1rem;
-  z-index: 90;
-  display: flex;
-  gap: var(--space-xs);
-}
-
-.site-footer {
-  padding-block: var(--space-xl);
-  background-color: var(--color-surface);
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-  text-align: center;
-  margin-block-start: auto;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-md);
-  margin-block-end: var(--space-xs);
-  list-style: none;
-}
-
-/* --------------------------------------------------------------------------
-   10B. Galeria de Bibliotecas SVG (Ícones, Selos, Mockups e Divisores)
-   -------------------------------------------------------------------------- */
-.badge-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-sm);
-  margin-block-start: var(--space-md);
-}
-
-.badge-strip img {
-  block-size: 46px;
-  inline-size: auto;
-  border-radius: var(--radius-sm);
-  transition: transform var(--transition-fast);
-}
-
-.badge-strip img:hover {
-  transform: translateY(-2px);
-}
-
-.media-frame img {
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
-  display: block;
-}
-
-.icon-swatch-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 135px), 1fr));
-  gap: var(--space-xs);
-  margin-block-start: var(--space-md);
-}
-
-.icon-swatch {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--space-xs);
-  min-block-size: 44px;
-  padding: 0.45rem 0.65rem;
-  background-color: var(--color-surface);
-  border: var(--line-width) solid var(--color-border-functional);
-  border-radius: var(--radius-sm);
-  color: var(--color-text-main);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  cursor: pointer;
-  text-align: start;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
-}
-
-.icon-swatch:hover,
-.icon-swatch:focus-visible {
-  border-color: var(--color-accent-outline);
-  background-color: var(--color-surface-subtle);
-}
-
-.icon-swatch::before {
-  color: var(--color-accent-ink);
-  inline-size: 1.15rem;
-  block-size: 1.15rem;
-}
-
-.svg-bg-grid {
-  background-image: url("../dividers/grid-pattern.svg");
-  background-repeat: repeat;
-}
-
-.svg-bg-dots {
-  background-image: url("../dividers/dots-pattern.svg");
-  background-repeat: repeat;
-}
-
-/* --------------------------------------------------------------------------
-   10C. Comparador Antes/Depois, Mural de Avaliações e Banner LGPD
-   -------------------------------------------------------------------------- */
-.ba-stage {
-  --split-pos: 50%;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  border: var(--line-width) solid var(--color-border-strong);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  margin-block: var(--space-sm);
-}
-
-.ba-panel {
-  grid-area: 1 / 1;
-  padding: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
-
-.ba-before {
-  background-color: var(--color-surface-subtle);
-}
-
-.ba-after {
-  background-color: var(--color-surface);
-  border-inline-start: 3px solid var(--color-cta);
-  clip-path: inset(0 0 0 calc(100% - var(--split-pos, 50%)));
-}
-
-.ba-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2xs);
-  align-self: flex-start;
-  padding: 0.2rem 0.6rem;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-.ba-badge-before {
-  background-color: var(--color-surface);
-  color: var(--color-error);
-  border: 1px solid var(--color-border);
-}
-
-.ba-badge-after {
-  background-color: var(--color-cta);
-  color: var(--color-cta-contrast);
-}
-
-.rating-bars {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-  margin-block: var(--space-sm);
-}
-
-.rating-row {
-  display: grid;
-  grid-template-columns: 2.5rem 1fr 2.8rem;
-  align-items: center;
-  gap: var(--space-xs);
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-}
-
-.lgpd-banner {
-  position: fixed;
-  inset-inline: 0;
-  inset-block-end: 0;
-  z-index: 95;
-  background-color: var(--color-surface);
-  border-block-start: var(--line-width) solid var(--color-border-strong);
-  box-shadow: var(--shadow-lg);
-  padding-block: var(--space-sm);
-}
-
-.lgpd-banner[hidden] {
-  display: none;
-}
-
-.lgpd-banner-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-sm);
-  font-size: 0.875rem;
-}
-
-.lgpd-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-}
-
-/* --------------------------------------------------------------------------
    11. Overrides de Componente por Estilo (data-estilo)
 
    Regra de ouro desta camada: só forma, ornamento e tipografia.
@@ -1880,88 +1612,420 @@ html[data-estilo="suave"] .hero-editorial-visual img { border-radius: var(--radi
 }
 
 /* --------------------------------------------------------------------------
-   Ajustes do projeto — Aquecedores Mairiporã
+   Layout da landing page — Aquecedores Mairiporã (neobrutalista)
+
+   Página de visualização única: cabeçalho, conteúdo, contato e rodapé
+   ocupam 100svh em telas grandes. Em telas pequenas o conteúdo flui
+   normalmente, sem cortes.
    -------------------------------------------------------------------------- */
 
-.form-error.is-visible {
-  display: block;
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
-.form-checkbox[aria-invalid="true"] {
-  outline: 2px solid var(--color-error);
-  outline-offset: 2px;
-}
-
-.form-check {
+.lp-shell {
   display: flex;
-  align-items: flex-start;
-  gap: var(--space-xs);
-}
-
-.form-checkbox {
-  flex: 0 0 auto;
-  inline-size: 20px;
-  block-size: 20px;
-  margin-block-start: 2px;
-  accent-color: var(--color-cta);
-}
-
-.form-check label {
-  font-size: 0.9rem;
-}
-
-.lead-summary {
-  max-block-size: 16rem;
-  margin-block: var(--space-sm);
-  padding: var(--space-md);
-  overflow: auto;
+  flex-direction: column;
+  min-block-size: 100svh;
   background-color: var(--color-bg);
-  border: var(--line-width) solid var(--color-border);
-  border-radius: var(--radius-sm);
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
 }
 
-.contact-list {
-  display: grid;
-  gap: var(--space-2xs);
-  justify-items: center;
-  margin-block: var(--space-sm);
-  list-style: none;
+/* 1. Cabeçalho ----------------------------------------------------------- */
+
+.lp-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-block: clamp(0.45rem, 1.1vh, 0.8rem);
+  padding-inline: clamp(1rem, 3.4vw, 3rem);
+  border-block-end: var(--line-width) solid var(--color-text-main);
+  background-color: var(--color-surface);
 }
 
-.contact-list li {
+.lp-brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.65rem;
+  color: var(--color-text-main);
+  text-decoration: none;
 }
 
-.placeholder {
-  display: inline-block;
-  padding: 0.05rem 0.35rem;
-  border: 1px dashed var(--color-border-strong);
-  border-radius: 4px;
-  font-size: 0.8rem;
+.lp-brand img {
+  inline-size: clamp(104px, 7.6vw, 132px);
+  block-size: auto;
+  border: var(--line-width) solid var(--color-text-main);
+  background-color: #ffffff;
+}
+
+.lp-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 1.6vw, 1.5rem);
+}
+
+.lp-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+  text-decoration: none;
+  border-block-end: 2px solid transparent;
+}
+
+.lp-nav a:hover,
+.lp-nav a:focus-visible {
+  border-block-end-color: var(--color-cta);
+}
+
+/* 2. Conteúdo principal -------------------------------------------------- */
+
+.lp-main {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1rem, 2.2vw, 2rem);
+  min-block-size: 0;
+  padding-block: clamp(0.9rem, 2.4vh, 1.8rem);
+  padding-inline: clamp(1rem, 3.4vw, 3rem);
+}
+
+.lp-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(0.7rem, 2.2vh, 1.8rem);
+  min-inline-size: 0;
+}
+
+.lp-copy-core,
+.lp-copy-foot {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.5vh, 0.95rem);
+  min-inline-size: 0;
+}
+
+.lp-tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 0.3rem 0.65rem;
+  background-color: var(--color-cta);
+  color: var(--color-cta-text);
+  border: var(--line-width) solid var(--color-text-main);
+  box-shadow: 3px 3px 0 var(--color-text-main);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.lp-tag[data-icon]::before {
+  background-color: currentColor;
+}
+
+.lp-copy h1 {
+  font-size: clamp(2rem, 1rem + 3.5vw, 4.4rem);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.lp-lead {
+  max-inline-size: 44ch;
+  font-size: clamp(0.92rem, 0.55rem + 0.62vw, 1.1rem);
+  line-height: 1.45;
   color: var(--color-text-muted);
 }
 
-.footer-note {
-  max-inline-size: 44rem;
-  margin-inline: auto;
+.lp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
-.footer-note a {
-  color: var(--color-accent-ink);
+.lp-services {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.38rem;
+  max-inline-size: 34rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.lp-chip {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 32px;
+  padding: 0.25rem 0.55rem;
+  background-color: var(--color-surface);
+  border: var(--line-width) solid var(--color-text-main);
+  box-shadow: 2px 2px 0 var(--color-text-main);
+  font-size: 0.72rem;
   font-weight: 700;
+  line-height: 1.1;
+}
+
+.lp-note {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.lp-brands {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.6rem;
+  padding-block-start: clamp(0.4rem, 1vh, 0.7rem);
+  border-block-start: 2px dashed var(--color-border-strong);
+}
+
+.lp-brands-label {
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.lp-brands-list {
+  flex: 1 1 18rem;
+  font-size: 0.73rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* 3. Galeria ------------------------------------------------------------- */
+
+.lp-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: stretch;
+  gap: clamp(0.45rem, 1vw, 0.85rem);
+  min-block-size: 0;
+}
+
+.lp-shot {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  min-block-size: 0;
+  background-color: var(--color-surface);
+  border: var(--line-width) solid var(--color-text-main);
+  box-shadow: var(--shadow-md);
+}
+
+.lp-shot--main {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+
+.lp-shot--contain {
+  aspect-ratio: 1 / 1;
+}
+
+.lp-shot img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.lp-shot--contain img {
+  padding: 0.4rem;
+  object-fit: contain;
+}
+
+.lp-shot figcaption {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--color-text-main);
+  color: var(--color-bg);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* 4. Faixa de contato ---------------------------------------------------- */
+
+.lp-contact {
+  border-block-start: var(--line-width) solid var(--color-text-main);
+  background-color: var(--color-surface-subtle);
+}
+
+.lp-contact ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem 1.2rem;
+  padding-block: 0.55rem;
+  padding-inline: clamp(1rem, 3.4vw, 3rem);
+  margin: 0;
+  list-style: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.lp-contact li {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 32px;
+}
+
+.lp-contact a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 32px;
+  color: var(--color-text-main);
+  text-decoration: none;
+  border-block-end: 2px solid var(--color-cta);
+}
+
+.lp-contact a:hover,
+.lp-contact a:focus-visible {
+  background-color: var(--color-cta-subtle);
+}
+
+/* 5. Rodapé -------------------------------------------------------------- */
+
+.lp-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem 1rem;
+  padding-block: 0.45rem;
+  padding-inline: clamp(1rem, 3.4vw, 3rem);
+  background-color: var(--color-text-main);
+  color: var(--color-bg);
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.lp-footer p {
+  margin: 0;
+}
+
+.lp-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 32px;
+  color: inherit;
+  font-weight: 800;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-@media (max-width: 640px) {
-  .floating-cta {
-    inset-block-end: 5.5rem;
+/* 6. Visualização única em telas grandes --------------------------------- */
+
+@media (min-width: 1024px) {
+  .lp-main {
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+    align-items: stretch;
+  }
+
+  .lp-gallery {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    grid-template-rows: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  }
+
+  .lp-shot--main,
+  .lp-shot--contain {
+    aspect-ratio: auto;
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 620px) {
+  html,
+  body {
+    block-size: 100%;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .lp-shell {
+    block-size: 100svh;
+    min-block-size: 0;
+  }
+}
+
+/* 7. Telas estreitas ----------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  .lp-header {
+    justify-content: space-between;
+  }
+
+  .lp-nav {
+    order: 3;
+    inline-size: 100%;
+    justify-content: space-between;
+    border-block-start: 2px dashed var(--color-border-strong);
+    padding-block-start: 0.25rem;
+  }
+
+  .lp-contact ul {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .lp-contact a,
+  .lp-footer a {
+    min-block-size: 44px;
+  }
+
+  .lp-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+  }
+}
+
+@media (max-width: 420px) {
+  .lp-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-shot--main {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* 8. Impressão ----------------------------------------------------------- */
+
+@media print {
+  .lp-nav,
+  .lp-header-cta {
+    display: none;
+  }
+
+  .lp-shot {
+    box-shadow: none;
   }
 }

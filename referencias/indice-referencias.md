@@ -4,7 +4,7 @@
 - **Plano de iniciação:** [`../docs/iniciacao/plano-iniciacao.md`](../docs/iniciacao/plano-iniciacao.md)
 - **Estado da seleção:** nenhuma fonte da biblioteca selecionada; insumos do projeto capturados localmente
 - **Decisão expressa do operador, data e meio:** 2026-11-12, decisão registrada na conversa de iniciação
-- **Versão deste índice:** 1.0
+- **Versão deste índice:** 2.0
 
 ## Fontes candidatas e selecionadas
 
@@ -26,6 +26,7 @@ Os itens abaixo são insumos de trabalho ou consultas, não fontes aprovadas par
 | `fonte-site-atual/imagens/` | 14 imagens do site | Nomes normalizados; bytes conferidos no manifesto | Direitos de uso pertencem aos titulares |
 | `fonte-site-atual/recursos/css-bundle-v2.css` | CSS público do Blogger | 36.892 bytes | Usado apenas como referência; o arquivo publicado usa cópia própria |
 | `../static/versao-antiga/` | Arquivo navegável do site | Ativos locais e links internos verificados; `noindex` presente | Inclui uma imagem adicional (`temperol-vendas.jpg`) capturada para completar o conjunto |
+| `../static/assets/img/` | Imagens da nova landing page | Quatro arquivos otimizados a partir do site original (`logo-aquecedores-mairipora.jpg`, `aquecimento-piscina.jpg`, `reservatorio-termomax.jpg`, `esquema-instalacao.jpg`) | Cópias redimensionadas; os originais permanecem no arquivo |
 
 ## Observações de direitos
 
@@ -37,7 +38,8 @@ Os itens abaixo são insumos de trabalho ou consultas, não fontes aprovadas par
 
 | Fonte proposta ou lacuna | Decisão ainda necessária | Efeito no projeto |
 |---|---|---|
-| Autorização de uso das imagens e marcas do arquivo | Confirmar com o responsável pela empresa | Manter, substituir ou restringir o arquivo público |
+| Autorização de uso das imagens e marcas | Confirmar com o responsável pela empresa | Manter, substituir ou restringir as imagens publicadas |
+| Atualidade dos contatos publicados | Confirmar com a empresa | Corrigir a faixa de contato e o rodapé |
 | Dados de contato e serviços atuais | Validar com a empresa | Substituir placeholders e ativar canais |
 | Política de privacidade vigente | Revisar com o responsável | Atualizar o modal e o texto do rodapé |
 | Seleção de fontes da biblioteca | Nenhuma seleção necessária nesta versão | Sem cópias adicionais em `referencias/` |

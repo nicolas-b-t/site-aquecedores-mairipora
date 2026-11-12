@@ -4,19 +4,21 @@ Escopo: esta landing page e o arquivo do site original. A iniciação segue a [p
 
 ## 1. Regras de conteúdo
 
-1. Não publique como fato nenhum contato, preço, prazo, garantia, marca ou número que não tenha sido confirmado pelo responsável pela empresa.
-2. Mantenha os placeholders `[a definir]` no rodapé e os campos vazios em `SITE_CONFIG` até a validação. O formulário deve continuar funcional apenas com o resumo local.
-3. Textos do site antigo são referência histórica. Não os trate como descrição atual do negócio.
-4. Preserve a privacidade: nenhum dado do formulário pode ser enviado, persistido ou incluído em analytics sem decisão expressa e atualização da política.
+1. Os contatos publicados vêm do site original: WhatsApp (11) 99765-1790, telefone (11) 4604-5226, e-mail aquecedoresmairipora@gmail.com e endereço na Rua Ana Maria C. Camargo, 29 — Jardim Galrão, Mairiporã/SP. Confirme a atualidade antes de divulgar.
+2. Não publique preço, prazo, garantia, número ou depoimento que não tenha sido confirmado pelo responsável pela empresa.
+3. Não invente horário de atendimento: o site original não informa.
+4. Textos e imagens do site antigo são referência histórica e comercial do cliente; não os trate como descrição de outra empresa.
+5. Não adicione formulário, analytics, cookies ou armazenamento local sem decisão expressa e atualização da política de privacidade.
 
 ## 2. Regras técnicas
 
-1. Publique somente `static/`; não adicione back-end, bundler, framework ou dependência de npm sem decisão expressa.
+1. Publique somente `static/`; não adicione back-end, bundler, framework ou dependência de npm.
 2. Mantenha uma única folha (`static/assets/css/styles.css`) e um único script (`static/assets/js/main.js`).
 3. Use os ícones de `static/assets/icons/` via `data-icon`; não insira `<svg>` ou `style=` inline em `static/*.html`.
-4. Preserve a estrutura de seções e cartões descrita em `docs/lista-requisitos.md` e no padrão do template.
-5. Execute `pwsh -NoProfile -ExecutionPolicy Bypass -File .\verificar-padrao.ps1` antes de qualquer entrega.
-6. Mantenha `lead-schema.json` alinhado aos campos reais do formulário.
+4. Preserve a estética neobrutalista: `data-estilo="neobrutalista"`, bordas de 2 px e sombras sólidas.
+5. Preserve a visualização única: em telas a partir de 1024 × 620 a página deve caber sem rolagem. Valide qualquer mudança de conteúdo em navegador antes de publicar.
+6. Execute `pwsh -NoProfile -ExecutionPolicy Bypass -File .\verificar-padrao.ps1` antes de qualquer entrega.
+7. Mantenha `lead-schema.json` apenas como contrato reservado; ele não é usado pela página atual.
 
 ## 3. Arquivo do site original
 
