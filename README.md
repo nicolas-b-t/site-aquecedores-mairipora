@@ -2,7 +2,14 @@
 
 Landing page estática de página única para a **Aquecedores Mairiporã**, com apresentação dos serviços, pedido de orçamento montado no navegador e arquivo navegável do site original.
 
-> **Estado:** primeira versão implementada. Os dados comerciais não confirmados permanecem como placeholder `[a definir]` e os canais de envio estão desativados até validação com a empresa.
+> **Estado:** primeira versão publicada. Os dados comerciais não confirmados permanecem como placeholder `[a definir]` e os canais de envio estão desativados até validação com a empresa.
+
+## 0. Publicação
+
+- **Repositório:** <https://github.com/nicolas-b-t/site-aquecedores-mairipora> (público)
+- **Site publicado:** <https://nicolas-b-t.github.io/site-aquecedores-mairipora/>
+- **Versão antiga:** <https://nicolas-b-t.github.io/site-aquecedores-mairipora/versao-antiga/index.html>
+- **Origem do deploy:** workflow `.github/workflows/pages.yml`, disparado a cada `push` em `main`; publica apenas `static/`.
 
 ## 1. Estrutura
 
@@ -97,7 +104,18 @@ A auditoria cobre profundidade de pastas, marcadores residuais, `h1` único, est
 
 ## 6. Publicação
 
-O workflow `.github/workflows/pages.yml` publica somente `static/`. Não há back-end, banco de dados, analytics ou dependências de terceiros.
+O repositório público `nicolas-b-t/site-aquecedores-mairipora` está configurado com GitHub Pages em modo **GitHub Actions**. O workflow `.github/workflows/pages.yml` publica somente `static/` e roda a cada `push` em `main` ou por acionamento manual (`workflow_dispatch`).
+
+- Site: <https://nicolas-b-t.github.io/site-aquecedores-mairipora/>
+- Primeiro deploy verificado em 2026-11-12, com `200` na home, nas três páginas do arquivo, no CSS, no JS e nas 15 imagens.
+
+Não há back-end, banco de dados, analytics ou dependências de terceiros. Para republicar após uma alteração:
+
+```powershell
+git add -A
+git commit -m "descrição da alteração"
+git push
+```
 
 ## 7. Documentação
 

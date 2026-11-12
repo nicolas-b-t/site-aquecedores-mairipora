@@ -39,6 +39,7 @@
 | RNF-08 | Padronização técnica | `verificar-padrao.ps1` aprova os dez invariantes | Aprovado em 2026-11-12 |
 | RNF-09 | Desempenho e simplicidade | Sem bibliotecas de terceiros, fontes externas ou scripts de rastreamento | Implementado |
 | RNF-10 | Arquivo autocontido | As páginas do arquivo não dependem de scripts ou imagens do Blogger para renderizar | Implementado |
+| RNF-11 | Publicação automatizada | `push` em `main` publica apenas `static/` via GitHub Pages; site responde `200` na home e no arquivo | Publicado em 2026-11-12 |
 
 ## 3. Conteúdo que permanece pendente
 
