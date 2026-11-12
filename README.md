@@ -121,6 +121,7 @@ git push
 
 ## 8. Documentação
 
+- [`docs/registro-alteracoes.md`](docs/registro-alteracoes.md) — histórico das entregas e pendências.
 - [`docs/iniciacao/plano-iniciacao.md`](docs/iniciacao/plano-iniciacao.md) — decisões, escopo e consulta ao PMBOK.
 - [`docs/briefing-negocio.md`](docs/briefing-negocio.md) — contexto, público, oferta e lacunas.
 - [`docs/lista-requisitos.md`](docs/lista-requisitos.md) — requisitos e critérios de aceitação.
