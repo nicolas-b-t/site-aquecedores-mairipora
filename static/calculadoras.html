@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-brand="industrial-obras" data-estilo="neobrutalista">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Estime a demanda de água quente para banho ou o volume da piscina e consulte fichas de equipamentos de aquecimento.">
+  <title>Calculadoras de aquecimento · Aquecedores Mairiporã</title>
+  <link rel="icon" href="assets/img/marca-sol.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="tools-page">
+  <a href="#ferramentas" class="skip-link">Pular para as calculadoras</a>
+  <div class="lp-topbar">
+    <div class="lp-topbar-inner">
+      <p class="lp-topbar-region" data-icon="map-pin">Mairiporã · SP e região</p>
+      <ul class="lp-topbar-contacts" aria-label="Contatos">
+        <li data-icon="phone"><a href="tel:+5511979445226">Fixo (11) 97944-5226</a></li>
+        <li data-icon="message-circle"><a href="https://wa.me/5511997651790">WhatsApp (11) 99765-1790</a></li>
+        <li data-icon="mail"><a href="mailto:aquecedoresmairipora@gmail.com">aquecedoresmairipora@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <header class="lp-header">
+    <a class="lp-brand" href="index.html" aria-label="Aquecedores Mairiporã — página inicial">
+      <img src="assets/img/logo-aquecedores-mairipora.svg" alt="Aquecedores Mairiporã" width="300" height="88">
+    </a>
+    <nav class="lp-nav" aria-label="Navegação das ferramentas">
+      <a href="#banho">Banho</a>
+      <a href="#piscina">Piscina</a>
+      <a href="#catalogo">Catálogo</a>
+    </nav>
+  </header>
+  <main class="tools-main" id="ferramentas">
+    <h1>Calculadoras de aquecimento</h1>
+    <p>Estime a necessidade, consulte os equipamentos e reúna os dados para pedir um orçamento.</p>
+    <noscript><p>Ative o JavaScript para usar as calculadoras e consultar o catálogo.</p></noscript>
+
+    <section class="tools-panel" id="banho" aria-labelledby="titulo-banho">
+      <h2 id="titulo-banho">Água quente para banho</h2>
+      <form id="calcular-banho" hidden>
+        <div class="tools-fields">
+          <label>Pessoas na residência
+            <input class="form-input" name="pessoas" type="number" inputmode="numeric" min="1" max="9999" required>
+          </label>
+          <label>Total de banhos por dia na residência
+            <input class="form-input" name="banhos" type="number" inputmode="numeric" min="1" max="9999" required>
+          </label>
+          <label>Tipo de aquecimento
+            <select class="form-input" name="tipo"><option value="solar">Solar</option><option value="eletrico">Elétrico</option></select>
+          </label>
+        </div>
+        <fieldset data-telhado>
+          <legend>Área útil do telhado</legend>
+          <p>Preencha pelo menos uma face, descontando obstáculos. Deixe em branco se a medida ainda for desconhecida.</p>
+          <div class="tools-fields">
+            <label>Face leste (m²)
+              <input class="form-input" name="leste" type="number" inputmode="decimal" min="0" max="99999" step="any">
+            </label>
+            <label>Face oeste (m²)
+              <input class="form-input" name="oeste" type="number" inputmode="decimal" min="0" max="99999" step="any">
+            </label>
+          </div>
+        </fieldset>
+        <button class="btn btn-primary" type="submit">Calcular para banho</button>
+      </form>
+      <section class="tools-result" data-resultado="banho" hidden tabindex="-1" aria-label="Resultado para banho"></section>
+    </section>
+
+    <section class="tools-panel" id="piscina" aria-labelledby="titulo-piscina">
+      <h2 id="titulo-piscina">Aquecimento de piscina</h2>
+      <form id="calcular-piscina" hidden>
+        <div class="tools-fields">
+          <label>Formato
+            <select class="form-input" name="formato"><option value="retangular">Retangular</option><option value="circular">Circular</option><option value="eliptica">Elíptica</option></select>
+          </label>
+          <label><span data-comprimento>Comprimento interno (m)</span>
+            <input class="form-input" name="comprimento" type="number" inputmode="decimal" min="0.01" max="9999" step="any" required>
+          </label>
+          <label data-campo-largura>Largura interna (m)
+            <input class="form-input" name="largura" type="number" inputmode="decimal" min="0.01" max="9999" step="any" required>
+          </label>
+          <label>Profundidade média da água (m)
+            <input class="form-input" name="profundidade" type="number" inputmode="decimal" min="0.01" max="100" step="any" required>
+          </label>
+          <label>Temperatura desejada (°C), se souber
+            <input class="form-input" name="temperatura" type="number" inputmode="decimal" min="1" max="60" step="any">
+          </label>
+          <label>Usa capa térmica?
+            <select class="form-input" name="capa"><option value="">Ainda não sei</option><option value="sim">Sim</option><option value="não">Não</option></select>
+          </label>
+        </div>
+        <button class="btn btn-primary" type="submit">Calcular para piscina</button>
+      </form>
+      <section class="tools-result" data-resultado="piscina" hidden tabindex="-1" aria-label="Resultado para piscina"></section>
+    </section>
+
+    <section class="tools-panel" id="catalogo" aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Catálogo técnico</h2>
+      <p>Consulte modelos de referência e as fontes dos fabricantes. A loja verifica a adequação de cada equipamento ao elaborar o orçamento.</p>
+      <div class="tools-fields" data-filtros hidden>
+        <label>Buscar marca ou modelo
+          <input class="form-input" id="buscar-produto" type="search" placeholder="Ex.: Komeco ou Solar Max">
+        </label>
+        <label>Família
+          <select class="form-input" id="familia-produto"><option value="">Todas as famílias</option></select>
+        </label>
+      </div>
+      <p id="status-catalogo" role="status">Carregando catálogo…</p>
+      <ul class="tools-catalog" id="itens-catalogo"></ul>
+      <button class="btn btn-secondary" id="mais-produtos" type="button" hidden>Mostrar mais modelos</button>
+    </section>
+    <p class="tools-privacy">As medidas são calculadas no seu navegador. Ao abrir o WhatsApp, o resumo é levado ao aplicativo para você revisar e enviar.</p>
+  </main>
+  <footer class="lp-footer">
+    <p>© <span data-current-year>2026</span> Aquecedores Mairiporã</p>
+    <p><a href="index.html">Página inicial</a></p>
+    <p><a href="versao-antiga/index.html">Versão antiga</a></p>
+  </footer>
+</body>
+</html>

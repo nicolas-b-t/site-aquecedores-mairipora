@@ -6,6 +6,16 @@
 
 > **Mudança de escopo (v2):** a versão anterior tinha formulário, UTM, aviso LGPD e FAQ. A pedido do operador, a página passou a ser **uma única visualização**, sem módulos de funcionalidade: o contato é direto por WhatsApp, telefone e e-mail. Os dados comerciais foram trazidos do site original.
 
+## Calculadoras e catálogo técnico — 2026-11-20
+
+| ID | Requisito | Critério de aceitação |
+| --- | --- | --- |
+| CAL-01 | Estimar demanda doméstica | Quatro moradores e cinco banhos totais por dia geram 500 L/dia. A opção elétrica dispensa os campos de telhado. |
+| CAL-02 | Consultar referências de aquecimento para banho | Mostrar referências de reservatório por capacidade e os kits documentados. Apresentar vácuo integrado e separado como famílias distintas. Área útil informa uma triagem geométrica preliminar. |
+| CAL-03 | Estimar área e volume de piscina | Com 8 × 4 × 1,4 m, mostrar 32 m² e 44,8 m³. Referências de aquecimento devem identificar as condições ainda sujeitas a avaliação. |
+| CAL-04 | Consultar catálogo | Buscar marca e modelo, filtrar por família e consultar as fontes técnicas. Preço e estoque ficam fora do catálogo. |
+| CAL-05 | Levar o resumo ao WhatsApp | Calcular localmente e abrir o aplicativo somente por ação do visitante. O texto é revisável antes do envio. O aviso de privacidade na página explica esse fluxo. |
+
 ## 1. Requisitos funcionais
 
 | ID | Requisito | Prioridade | Critério de aceitação | Estado |
@@ -30,7 +40,7 @@
 | RNF-03 | Sem estilos ou SVGs inline na página principal | `verificar-padrao.ps1` não encontra `style=` nem `<svg>` em `static/*.html` | Implementado |
 | RNF-04 | Acessibilidade WCAG 2.2 AA | Foco visível, rótulos, contraste, alvos de 44 px na navegação e texto alternativo nas imagens | Verificado no padrão; revisão manual pendente |
 | RNF-05 | Estética neobrutalista | `data-estilo="neobrutalista"`, bordas de 2 px, sombras sólidas e tipografia pesada | Implementado |
-| RNF-06 | Privacidade | A página não possui formulário, cookies, analytics ou armazenamento local | Implementado |
+| RNF-06 | Privacidade | Os formulários de cálculo são locais. O site não usa cookies, analytics ou armazenamento local para processar as medidas. | Implementado |
 | RNF-07 | Conteúdo verificável | Contatos e serviços vêm do site original; nenhum preço, prazo ou garantia é publicado | Implementado |
 | RNF-08 | Padronização técnica | `verificar-padrao.ps1` aprova os dez invariantes | Aprovado em 2026-11-12 |
 | RNF-09 | Desempenho | 4 imagens somando ~166 KB; sem fontes ou bibliotecas externas | Implementado |

@@ -2,12 +2,13 @@
 
 Landing page estática de **visualização única** para a **Aquecedores Mairiporã**, com estética **neobrutalista**, os dados de contato do site original e o arquivo navegável da versão anterior.
 
-> **Estado:** publicado. Sem formulário e sem coleta de dados: o contato é direto por WhatsApp, telefone e e-mail.
+O contato é direto por WhatsApp, telefone e e-mail. As calculadoras processam as medidas no navegador e permitem levar um resumo ao WhatsApp.
 
 ## 0. Publicação
 
 - **Repositório:** <https://github.com/nicolas-b-t/site-aquecedores-mairipora> (público)
 - **Site publicado:** <https://nicolas-b-t.github.io/site-aquecedores-mairipora/>
+- **Calculadoras e catálogo:** <https://nicolas-b-t.github.io/site-aquecedores-mairipora/calculadoras.html>
 - **Versão antiga:** <https://nicolas-b-t.github.io/site-aquecedores-mairipora/versao-antiga/index.html>
 - **Deploy:** workflow `.github/workflows/pages.yml`, disparado a cada `push` em `main`; publica apenas `static/`.
 
@@ -17,9 +18,11 @@ Landing page estática de **visualização única** para a **Aquecedores Mairipo
 site-aquecedores-mairipora/
 ├── static/                         # Única pasta publicada
 │   ├── index.html                  # Landing page (uma tela)
+│   ├── calculadoras.html           # Banho, piscina e catálogo técnico
 │   ├── assets/
 │   │   ├── css/styles.css          # Folha única
-│   │   ├── js/main.js              # Script único (ano do rodapé)
+│   │   ├── js/main.js              # Script único
+│   │   ├── dados/catalogo.json     # Catálogo exportado do SQLite
 │   │   ├── icons/                  # Ícones SVG (data-icon)
 │   │   └── img/                    # Logo em SVG e fotos do site antigo
 │   └── versao-antiga/              # Arquivo do site original
@@ -50,7 +53,15 @@ site-aquecedores-mairipora/
 - Endereço no hero, junto aos botões de contato.
 - Rodapé enxuto com o link **“Versão antiga”**.
 
-Não há formulário, banner de cookies, analytics, UTM ou armazenamento local.
+As calculadoras usam formulários locais, sem envio automático, cookies, analytics ou armazenamento local. O catálogo tem finalidade de consulta, e o orçamento é elaborado posteriormente pela loja.
+
+Para atualizar o catálogo, revise os CSVs de variantes e kits em `docs/refinamento/catalogo/`, confira as fichas de origem e execute na raiz do repositório:
+
+```sh
+python -B docs/refinamento/catalogo/publicar.py
+```
+
+O script valida a base SQLite e exporta `static/assets/dados/catalogo.json`. Inclua o JSON gerado junto com os CSVs na próxima publicação.
 
 ## 3. Visualização única
 

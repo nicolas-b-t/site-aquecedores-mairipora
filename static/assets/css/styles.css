@@ -2019,7 +2019,7 @@ html[data-theme="dark"] .lp-topbar {
     block-size: 100%;
   }
 
-  body {
+  body:not(.tools-page) {
     overflow: hidden;
   }
 
@@ -2094,7 +2094,76 @@ html[data-theme="dark"] .lp-topbar {
   }
 }
 
-/* 8. Impressão ----------------------------------------------------------- */
+/* 8. Calculadoras e catálogo --------------------------------------------- */
+
+.tools-main {
+  width: min(100% - 2rem, 68rem);
+  margin-inline: auto;
+  padding-block: var(--space-lg);
+}
+
+.tools-main h1 {
+  line-height: 1.05;
+  font-size: clamp(2rem, 5.5vw, 3.5rem);
+  margin-block-end: var(--space-xs);
+}
+
+.tools-panel {
+  margin-block-start: var(--space-lg);
+  padding: clamp(1rem, 3vw, 1.75rem);
+  border: 2px solid var(--color-text-main);
+  box-shadow: 3px 3px 0 var(--color-text-main);
+  background: var(--color-surface);
+}
+
+.tools-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--space-sm);
+  margin-block: var(--space-sm);
+}
+
+.tools-fields label { font-weight: 700; }
+.tools-fields .form-input { margin-block-start: .25rem; }
+.tools-panel fieldset { margin-block: var(--space-sm); }
+.tools-panel legend { font-weight: 800; }
+.tools-page [hidden] { display: none; }
+
+.tools-result {
+  border-block-start: 2px solid var(--color-border-strong);
+  margin-block-start: var(--space-md);
+  padding-block-start: var(--space-md);
+}
+
+.tools-result ul { padding-inline-start: 1.25rem; }
+.tools-result li + li { margin-block-start: var(--space-xs); }
+.tools-result .btn { margin-block-start: var(--space-sm); }
+
+.tools-catalog {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: var(--space-sm);
+  margin-block: var(--space-sm);
+}
+
+.tools-catalog li {
+  overflow-wrap: anywhere;
+  border: 2px solid var(--color-border-strong);
+  padding: var(--space-sm);
+  background: var(--color-surface-subtle);
+}
+
+.tools-catalog h3 { font-size: 1rem; }
+.tools-catalog p { margin-block: var(--space-xs); }
+.tools-privacy { margin-block-start: var(--space-lg); }
+
+@media (min-width: 1024px) and (min-height: 620px) {
+  body.tools-page { block-size: auto; }
+}
+
+/* 9. Impressão ----------------------------------------------------------- */
 
 @media print {
   .lp-nav,
